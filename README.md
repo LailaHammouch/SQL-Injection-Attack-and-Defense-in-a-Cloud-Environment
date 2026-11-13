@@ -155,77 +155,7 @@ AWS-SQL-Injection-Defense/
     └── README.md
 ```
 
-## 8. Deployment and Execution
-
-### Prerequisites
-
-- AWS account.
-- Ubuntu Server EC2 instance.
-- SSH access and an SSH key pair.
-- Kali Linux testing machine.
-- Restricted AWS Security Group rules.
-
-### Connect to the EC2 Instance
-
-```bash
-chmod 400 your-key.pem
-
-ssh -i your-key.pem ubuntu@EC2_PUBLIC_IP
-```
-
-### Install the Environment
-
-Clone the repository:
-
-```bash
-git clone https://github.com/USERNAME/AWS-SQL-Injection-Defense.git
-
-cd AWS-SQL-Injection-Defense
-```
-
-Make scripts executable:
-
-```bash
-chmod +x scripts/*.sh
-```
-
-Run the installation script:
-
-```bash
-sudo bash scripts/01_install_dvwa_modsecurity.sh
-```
-
-### Configure DVWA
-
-Access the application:
-
-```text
-http://EC2_PUBLIC_IP/dvwa/setup.php
-```
-
-Create or reset the DVWA database through the setup interface.
-
-### Enable ModSecurity Protection
-
-After validating the application in DetectionOnly mode:
-
-```bash
-sudo bash scripts/02_enable_waf.sh
-```
-
-### Test WAF Protection
-
-```bash
-sudo bash scripts/03_test_waf.sh
-```
-
-### Collect Security Logs
-
-```bash
-sudo bash scripts/04_collect_logs.sh
-```
-
-## 9. Expected Results
+## 8. Expected Results
 
 The project aims to demonstrate the following security outcomes:
 
@@ -240,7 +170,7 @@ The project aims to demonstrate the following security outcomes:
 
 *Actual results depend on the ModSecurity configuration, OWASP CRS version and application behavior.*
 
-## 10. Security Considerations
+## 9. Security Considerations
 
 - DVWA is intentionally vulnerable and must only be deployed in an isolated testing environment.
 - Restrict access through AWS Security Groups.
@@ -250,7 +180,7 @@ The project aims to demonstrate the following security outcomes:
 - WAF protection should complement secure application development, not replace it.
 - Parameterized SQL queries and secure coding practices remain essential to prevent SQL Injection.
 
-## 11. Conclusion
+## 10. Conclusion
 
 This project demonstrates a practical approach to securing web applications hosted in a cloud environment.
 
