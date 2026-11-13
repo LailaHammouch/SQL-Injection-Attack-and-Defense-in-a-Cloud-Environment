@@ -40,7 +40,7 @@ The architecture consists of three main environments:
 
 ### Architecture Diagram
 
-![AWS SQL Injection Defense Architecture](docs/architecture.png)
+![AWS SQL Injection Defense Architecture](https://github.com/LailaHammouch/Mini-Projet-tude-et-protection-contre-une-attaque-SQL-Injection-dans-le-Cloud/blob/main/aws.png)
 
 ### Architecture Components
 
