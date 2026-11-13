@@ -143,12 +143,6 @@ AWS-SQL-Injection-Defense/
 ├── docs/
 │   └── architecture.png
 │
-├── scripts/
-│   ├── 01_install_dvwa_modsecurity.sh
-│   ├── 02_enable_waf.sh
-│   ├── 03_test_waf.sh
-│   └── 04_collect_logs.sh
-│
 ├── screenshots/
 │   ├── ec2-instance.png
 │   ├── security-group.png
